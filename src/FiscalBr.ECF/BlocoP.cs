@@ -6,22 +6,20 @@ namespace FiscalBr.ECF
 {
     public class BlocoP
     {
-        public class RegP001 : RegistroBaseSped
+        public class RegP001 : RegistroSped
         {
-            public RegP001()
+            public RegP001() : base("P001")
             {
-                Reg = "P001";
             }
 
             [SpedCampos(2, "IND_DAD", "N", 1, 0, true, 2)]
             public int IndDad { get; set; }
         }
 
-        public class RegP030 : RegistroBaseSped
+        public class RegP030 : RegistroSped
         {
-            public RegP030()
+            public RegP030() : base("P030")
             {
-                Reg = "P030";
             }
 
             [SpedCampos(2, "DT_INI", "N", 8, 0, true, 2)]
@@ -34,17 +32,16 @@ namespace FiscalBr.ECF
             public string PerApur { get; set; }
         }
 
-        public class RegP100 : RegistroBaseSped
+        public class RegP100 : RegistroSped
         {
-            public RegP100()
+            public RegP100() : base("P100")
             {
-                Reg = "P100";
             }
 
             [SpedCampos(2, "CODIGO", "C", 50, 0, true, 2)]
             public string Codigo { get; set; }
 
-            [SpedCampos(3, "DESCRICAO", "C", 0, 0, false, 2)]
+            [SpedCampos(3, "DESCRICAO", "C", 60, 0, false, 2)]
             public string Descricao { get; set; }
 
             [SpedCampos(4, "TIPO", "C", 1, 0, true, 2)]
@@ -72,28 +69,26 @@ namespace FiscalBr.ECF
             public string IndValCtaRefFin { get; set; }
         }
 
-        public class RegP130 : RegistroBaseSped
+        public class RegP130 : RegistroSped
         {
-            public RegP130()
+            public RegP130() : base("P130")
             {
-                Reg = "P130";
             }
 
-            [SpedCampos(2, "CODIGO", "C", 0, 0, true, 2)]
+            [SpedCampos(2, "CODIGO", "C", 60, 0, true, 2)]
             public string Codigo { get; set; }
 
-            [SpedCampos(3, "DESCRICAO", "C", 0, 0, false, 2)]
+            [SpedCampos(3, "DESCRICAO", "C", 60, 0, false, 2)]
             public string Descricao { get; set; }
 
             [SpedCampos(4, "VALOR", "NS", 19, 2, false, 2)]
             public decimal? Valor { get; set; }
         }
 
-        public class RegP150 : RegistroBaseSped
+        public class RegP150 : RegistroSped
         {
-            public RegP150()
+            public RegP150() : base("P150")
             {
-                Reg = "P150";
             }
 
             [SpedCampos(2, "CODIGO", "C", 50, 0, true, 2)]
@@ -121,99 +116,93 @@ namespace FiscalBr.ECF
             public string IndValor { get; set; }
         }
 
-        public class RegP200 : RegistroBaseSped
+        public class RegP200 : RegistroSped
         {
-            public RegP200()
+            public RegP200() : base("P200")
             {
-                Reg = "P200";
             }
 
-            [SpedCampos(2, "CODIGO", "C", 0, 0, true, 2)]
+            [SpedCampos(2, "CODIGO", "C", 60, 0, true, 2)]
             public string Codigo { get; set; }
 
-            [SpedCampos(3, "DESCRICAO", "C", 0, 0, false, 2)]
+            [SpedCampos(3, "DESCRICAO", "C", 60, 0, false, 2)]
             public string Descricao { get; set; }
 
             [SpedCampos(4, "VALOR", "NS", 19, 2, false, 2)]
             public decimal? Valor { get; set; }
         }
 
-        public class RegP230 : RegistroBaseSped
+        public class RegP230 : RegistroSped
         {
-            public RegP230()
+            public RegP230() : base("P230")
             {
-                Reg = "P230";
             }
 
-            [SpedCampos(2, "CODIGO", "C", 0, 0, true, 2)]
+            [SpedCampos(2, "CODIGO", "C", 60, 0, true, 2)]
             public string Codigo { get; set; }
 
-            [SpedCampos(3, "DESCRICAO", "C", 0, 0, false, 2)]
+            [SpedCampos(3, "DESCRICAO", "C", 60, 0, false, 2)]
             public string Descricao { get; set; }
 
             [SpedCampos(4, "VALOR", "NS", 19, 2, false, 2)]
             public decimal? Valor { get; set; }
         }
 
-        public class RegP300 : RegistroBaseSped
+        public class RegP300 : RegistroSped
         {
-            public RegP300()
+            public RegP300() : base("P300")
             {
-                Reg = "P300";
             }
 
-            [SpedCampos(2, "CODIGO", "C", 0, 0, true, 2)]
+            [SpedCampos(2, "CODIGO", "C", 60, 0, true, 2)]
             public string Codigo { get; set; }
 
-            [SpedCampos(3, "DESCRICAO", "C", 0, 0, false, 2)]
+            [SpedCampos(3, "DESCRICAO", "C", 60, 0, false, 2)]
             public string Descricao { get; set; }
 
             [SpedCampos(4, "VALOR", "NS", 19, 2, false, 2)]
             public decimal? Valor { get; set; }
         }
 
-        public class RegP400 : RegistroBaseSped
+        public class RegP400 : RegistroSped
         {
-            public RegP400()
+            public RegP400() : base("P400")
             {
-                Reg = "P400";
             }
 
-            [SpedCampos(2, "CODIGO", "C", 0, 0, true, 2)]
+            [SpedCampos(2, "CODIGO", "C", 60, 0, true, 2)]
             public string Codigo { get; set; }
 
-            [SpedCampos(3, "DESCRICAO", "C", 0, 0, false, 2)]
+            [SpedCampos(3, "DESCRICAO", "C", 60, 0, false, 2)]
             public string Descricao { get; set; }
 
             [SpedCampos(4, "VALOR", "NS", 19, 2, false, 2)]
             public decimal? Valor { get; set; }
         }
 
-        public class RegP500 : RegistroBaseSped
+        public class RegP500 : RegistroSped
         {
-            public RegP500()
+            public RegP500() : base("P500")
             {
-                Reg = "P500";
             }
 
-            [SpedCampos(2, "CODIGO", "C", 0, 0, true, 2)]
+            [SpedCampos(2, "CODIGO", "C", 60, 0, true, 2)]
             public string Codigo { get; set; }
 
-            [SpedCampos(3, "DESCRICAO", "C", 0, 0, false, 2)]
+            [SpedCampos(3, "DESCRICAO", "C", 60, 0, false, 2)]
             public string Descricao { get; set; }
 
             [SpedCampos(4, "VALOR", "NS", 19, 2, false, 2)]
             public decimal? Valor { get; set; }
         }
 
-        public class RegP990 : RegistroBaseSped
+        public class RegP990 : RegistroSped
         {
-            public RegP990()
+            public RegP990() : base("P990")
             {
-                Reg = "P990";
             }
 
-            [SpedCampos(2, "QTD_LIN", "N", 0, 0, true, 2)]
+            [SpedCampos(2, "QTD_LIN", "N", int.MaxValue, 0, true, 2)]
             public int QtdLin { get; set; }
         }
     }

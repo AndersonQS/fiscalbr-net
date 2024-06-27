@@ -6,11 +6,10 @@ namespace FiscalBr.ECF
 {
     public class BlocoJ
     {
-        public class RegJ001 : RegistroBaseSped
+        public class RegJ001 : RegistroSped
         {
-            public RegJ001()
+            public RegJ001() : base("J001")
             {
-                Reg = "J001";
             }
 
             /// <summary>
@@ -20,11 +19,10 @@ namespace FiscalBr.ECF
             public int IndDad { get; set; }
         }
 
-        public class RegJ050 : RegistroBaseSped
+        public class RegJ050 : RegistroSped
         {
-            public RegJ050()
+            public RegJ050() : base("J050")
             {
-                Reg = "J050";
             }
 
             [SpedCampos(2, "DT_ALT", "N", 8, 0, true, 2)]
@@ -49,11 +47,10 @@ namespace FiscalBr.ECF
             public string Cta { get; set; }
         }
 
-        public class RegJ051 : RegistroBaseSped
+        public class RegJ051 : RegistroSped
         {
-            public RegJ051()
+            public RegJ051() : base("J051")
             {
-                Reg = "J051";
             }
 
             [SpedCampos(2, "COD_CCUS", "C", 0, 0, false, 2)]
@@ -63,11 +60,10 @@ namespace FiscalBr.ECF
             public string CodCtaRef { get; set; }
         }
 
-        public class RegJ053 : RegistroBaseSped
+        public class RegJ053 : RegistroSped
         {
-            public RegJ053()
+            public RegJ053() : base("J053")
             {
-                Reg = "J053";
             }
 
             [SpedCampos(2, "COD_IDT", "C", 6, 0, true, 2)]
@@ -80,11 +76,10 @@ namespace FiscalBr.ECF
             public string NatSubCnt { get; set; }
         }
 
-        public class RegJ100 : RegistroBaseSped
+        public class RegJ100 : RegistroSped
         {
-            public RegJ100()
+            public RegJ100() : base("J100")
             {
-                Reg = "J100";
             }
 
             [SpedCampos(2, "DT_ALT", "N", 8, 0, true, 2)]
@@ -97,14 +92,13 @@ namespace FiscalBr.ECF
             public string CCus { get; set; }
         }
 
-        public class RegJ990 : RegistroBaseSped
+        public class RegJ990 : RegistroSped
         {
-            public RegJ990()
+            public RegJ990() : base("J990")
             {
-                Reg = "J990";
             }
 
-            [SpedCampos(2, "QTD_LIN", "N", 0, 0, true, 2)]
+            [SpedCampos(2, "QTD_LIN", "N", int.MaxValue, 0, true, 2)]
             public int QtdLin { get; set; }
         }
     }

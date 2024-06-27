@@ -6,22 +6,20 @@ namespace FiscalBr.ECF
 {
     public class BlocoX
     {
-        public class RegX001 : RegistroBaseSped
+        public class RegX001 : RegistroSped
         {
-            public RegX001()
+            public RegX001() : base("X001")
             {
-                Reg = "X001";
             }
 
             [SpedCampos(2, "IND_DAD", "N", 1, 0, true, 2)]
             public int IndDad { get; set; }
         }
 
-        public class RegX280 : RegistroBaseSped
+        public class RegX280 : RegistroSped
         {
-            public RegX280()
+            public RegX280() : base("X280")
             {
-                Reg = "X280";
             }
 
             [SpedCampos(2, "IND_ATIV", "C", 2, 0, true, 2)]
@@ -40,11 +38,10 @@ namespace FiscalBr.ECF
             public string VigFim { get; set; }
         }
 
-        public class RegX291 : RegistroBaseSped
+        public class RegX291 : RegistroSped
         {
-            public RegX291()
+            public RegX291() : base("X291")
             {
-                Reg = "X291";
             }
 
             [SpedCampos(2, "CODIGO", "C", 0, 0, true, 2)]
@@ -57,11 +54,10 @@ namespace FiscalBr.ECF
             public decimal? Valor { get; set; }
         }
 
-        public class RegX292 : RegistroBaseSped
+        public class RegX292 : RegistroSped
         {
-            public RegX292()
+            public RegX292() : base("X292")
             {
-                Reg = "X292";
             }
 
             [SpedCampos(2, "CODIGO", "C", 0, 0, true, 2)]
@@ -74,11 +70,10 @@ namespace FiscalBr.ECF
             public decimal? Valor { get; set; }
         }
 
-        public class RegX300 : RegistroBaseSped
+        public class RegX300 : RegistroSped
         {
-            public RegX300()
+            public RegX300() : base("X300")
             {
-                Reg = "X300";
             }
 
             [SpedCampos(2, "NUM_ORDEM", "C", 0, 0, true, 2)]
@@ -133,11 +128,10 @@ namespace FiscalBr.ECF
             public string TipMoeda { get; set; }
         }
 
-        public class RegX310 : RegistroBaseSped
+        public class RegX310 : RegistroSped
         {
-            public RegX310()
+            public RegX310() : base("X310")
             {
-                Reg = "X310";
             }
 
             [SpedCampos(2, "NOME", "C", 0, 0, true, 2)]
@@ -153,11 +147,10 @@ namespace FiscalBr.ECF
             public int CondPes { get; set; }
         }
 
-        public class RegX320 : RegistroBaseSped
+        public class RegX320 : RegistroSped
         {
-            public RegX320()
+            public RegX320() : base("X320")
             {
-                Reg = "X320";
             }
 
             [SpedCampos(2, "NUM_ORD", "C", 0, 0, true, 2)]
@@ -206,11 +199,10 @@ namespace FiscalBr.ECF
             public string CodCnc { get; set; }
         }
 
-        public class RegX330 : RegistroBaseSped
+        public class RegX330 : RegistroSped
         {
-            public RegX330()
+            public RegX330() : base("X330")
             {
-                Reg = "X330";
             }
 
             [SpedCampos(2, "NOME", "C", 0, 0, true, 2)]
@@ -226,11 +218,10 @@ namespace FiscalBr.ECF
             public int CondPes { get; set; }
         }
 
-        public class RegX340 : RegistroBaseSped
+        public class RegX340 : RegistroSped
         {
-            public RegX340()
+            public RegX340() : base("X340")
             {
-                Reg = "X340";
             }
 
             [SpedCampos(2, "RAZ_SOCIAL", "C", 0, 0, true, 2)]
@@ -258,11 +249,10 @@ namespace FiscalBr.ECF
             public string Cnpj { get; set; }
         }
 
-        public class RegX350 : RegistroBaseSped
+        public class RegX350 : RegistroSped
         {
-            public RegX350()
+            public RegX350() : base("X350")
             {
-                Reg = "X350";
             }
 
             [SpedCampos(2, "REC_LIQ", "N", 19, 2, false, 2)]
@@ -308,11 +298,10 @@ namespace FiscalBr.ECF
             public decimal? LucLiq { get; set; }
         }
 
-        public class RegX351 : RegistroBaseSped
+        public class RegX351 : RegistroSped
         {
-            public RegX351()
+            public RegX351() : base("X351")
             {
-                Reg = "X351";
             }
 
             [SpedCampos(2, "RES_INV_PER", "NS", 19, 2, false, 2)]
@@ -358,11 +347,10 @@ namespace FiscalBr.ECF
             public decimal? ImpRetBr { get; set; }
         }
 
-        public class RegX352 : RegistroBaseSped
+        public class RegX352 : RegistroSped
         {
-            public RegX352()
+            public RegX352() : base("X352")
             {
-                Reg = "X352";
             }
 
             [SpedCampos(2, "RES_PER", "NS", 19, 2, false, 2)]
@@ -378,11 +366,10 @@ namespace FiscalBr.ECF
             public decimal? LucDispReal { get; set; }
         }
 
-        public class RegX353 : RegistroBaseSped
+        public class RegX353 : RegistroSped
         {
-            public RegX353()
+            public RegX353() : base("X353")
             {
-                Reg = "X353";
             }
 
             [SpedCampos(2, "RES_NEG_UTIL", "N", 19, 2, false, 2)]
@@ -398,11 +385,10 @@ namespace FiscalBr.ECF
             public decimal? SaldoResNegNaoUtilReal { get; set; }
         }
 
-        public class RegX354 : RegistroBaseSped
+        public class RegX354 : RegistroSped
         {
-            public RegX354()
+            public RegX354() : base("X354")
             {
-                Reg = "X354";
             }
 
             [SpedCampos(2, "RES_NEG", "N", 19, 2, false, 2)]
@@ -415,11 +401,10 @@ namespace FiscalBr.ECF
             public decimal? SaldoResNeg { get; set; }
         }
 
-        public class RegX355 : RegistroBaseSped
+        public class RegX355 : RegistroSped
         {
-            public RegX355()
+            public RegX355() : base("X355")
             {
-                Reg = "X355";
             }
 
             [SpedCampos(2, "REND_PASS_PROP", "N", 19, 2, false, 2)]
@@ -444,11 +429,10 @@ namespace FiscalBr.ECF
             public decimal? Percentual { get; set; }
         }
 
-        public class RegX356 : RegistroBaseSped
+        public class RegX356 : RegistroSped
         {
-            public RegX356()
+            public RegX356() : base("X356")
             {
-                Reg = "X356";
             }
 
             [SpedCampos(2, "PERC_PART", "N", 8, 4, false, 2)]
@@ -461,11 +445,10 @@ namespace FiscalBr.ECF
             public decimal? PatLiquido { get; set; }
         }
 
-        public class RegX390 : RegistroBaseSped
+        public class RegX390 : RegistroSped
         {
-            public RegX390()
+            public RegX390() : base("X390")
             {
-                Reg = "X390";
             }
 
             [SpedCampos(2, "CODIGO", "C", 0, 0, true, 2)]
@@ -478,11 +461,10 @@ namespace FiscalBr.ECF
             public decimal? Valor { get; set; }
         }
 
-        public class RegX400 : RegistroBaseSped
+        public class RegX400 : RegistroSped
         {
-            public RegX400()
+            public RegX400() : base("X400")
             {
-                Reg = "X400";
             }
 
             [SpedCampos(2, "CODIGO", "C", 6, 0, true, 2)]
@@ -495,11 +477,10 @@ namespace FiscalBr.ECF
             public decimal? Valor { get; set; }
         }
 
-        public class RegX410 : RegistroBaseSped
+        public class RegX410 : RegistroSped
         {
-            public RegX410()
+            public RegX410() : base("X410")
             {
-                Reg = "X410";
             }
 
             [SpedCampos(2, "PAIS", "N", 3, 0, true, 2)]
@@ -512,11 +493,10 @@ namespace FiscalBr.ECF
             public string IndServDisp { get; set; }
         }
 
-        public class RegX420 : RegistroBaseSped
+        public class RegX420 : RegistroSped
         {
-            public RegX420()
+            public RegX420() : base("X420")
             {
-                Reg = "X420";
             }
 
             [SpedCampos(2, "TIP_ROY", "C", 1, 0, true, 2)]
@@ -547,11 +527,10 @@ namespace FiscalBr.ECF
             public decimal? VlExplInt { get; set; }
         }
 
-        public class RegX430 : RegistroBaseSped
+        public class RegX430 : RegistroSped
         {
-            public RegX430()
+            public RegX430() : base("X430")
             {
-                Reg = "X430";
             }
 
             [SpedCampos(2, "PAIS", "N", 3, 0, true, 2)]
@@ -576,11 +555,10 @@ namespace FiscalBr.ECF
             public decimal? VlDivid { get; set; }
         }
 
-        public class RegX450 : RegistroBaseSped
+        public class RegX450 : RegistroSped
         {
-            public RegX450()
+            public RegX450() : base("X450")
             {
-                Reg = "X450";
             }
 
             [SpedCampos(2, "PAIS", "N", 3, 0, true, 2)]
@@ -611,11 +589,10 @@ namespace FiscalBr.ECF
             public decimal? VlDividaPj { get; set; }
         }
 
-        public class RegX460 : RegistroBaseSped
+        public class RegX460 : RegistroSped
         {
-            public RegX460()
+            public RegX460() : base("X460")
             {
-                Reg = "X460";
             }
 
             [SpedCampos(2, "CODIGO", "C", 6, 0, true, 2)]
@@ -628,11 +605,10 @@ namespace FiscalBr.ECF
             public decimal? Valor { get; set; }
         }
 
-        public class RegX470 : RegistroBaseSped
+        public class RegX470 : RegistroSped
         {
-            public RegX470()
+            public RegX470() : base("X470")
             {
-                Reg = "X470";
             }
 
             [SpedCampos(2, "CODIGO", "C", 6, 0, true, 2)]
@@ -645,11 +621,10 @@ namespace FiscalBr.ECF
             public decimal? Valor { get; set; }
         }
 
-        public class RegX480 : RegistroBaseSped
+        public class RegX480 : RegistroSped
         {
-            public RegX480()
+            public RegX480() : base("X480")
             {
-                Reg = "X480";
             }
 
             [SpedCampos(2, "CODIGO", "C", 6, 0, true, 2)]
@@ -662,11 +637,10 @@ namespace FiscalBr.ECF
             public decimal? Valor { get; set; }
         }
 
-        public class RegX490 : RegistroBaseSped
+        public class RegX490 : RegistroSped
         {
-            public RegX490()
+            public RegX490() : base("X490")
             {
-                Reg = "X490";
             }
 
             [SpedCampos(2, "CODIGO", "C", 6, 0, true, 2)]
@@ -679,11 +653,10 @@ namespace FiscalBr.ECF
             public decimal? Valor { get; set; }
         }
 
-        public class RegX500 : RegistroBaseSped
+        public class RegX500 : RegistroSped
         {
-            public RegX500()
+            public RegX500() : base("X500")
             {
-                Reg = "X500";
             }
 
             [SpedCampos(2, "CODIGO", "C", 6, 0, true, 2)]
@@ -696,11 +669,10 @@ namespace FiscalBr.ECF
             public decimal? Valor { get; set; }
         }
 
-        public class RegX510 : RegistroBaseSped
+        public class RegX510 : RegistroSped
         {
-            public RegX510()
+            public RegX510() : base("X510")
             {
-                Reg = "X510";
             }
 
             [SpedCampos(2, "CODIGO", "C", 6, 0, true, 2)]
@@ -713,14 +685,13 @@ namespace FiscalBr.ECF
             public decimal? Valor { get; set; }
         }
 
-        public class RegX990 : RegistroBaseSped
+        public class RegX990 : RegistroSped
         {
-            public RegX990()
+            public RegX990() : base("X990")
             {
-                Reg = "X990";
             }
 
-            [SpedCampos(2, "QTD_LIN", "N", 0, 0, true, 2)]
+            [SpedCampos(2, "QTD_LIN", "N", int.MaxValue, 0, true, 2)]
             public int QtdLin { get; set; }
         }
     }

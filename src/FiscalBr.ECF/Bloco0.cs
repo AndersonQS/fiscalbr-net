@@ -9,11 +9,10 @@ namespace FiscalBr.ECF
         /// <summary>
         ///     REGISTRO 0000: ABERTURA DO ARQUIVO DIGITAL E IDENTIFICAÇÃO DA PESSOA JURÍDICA
         /// </summary>
-        public class Registro0000 : RegistroBaseSped
+        public class Registro0000 : RegistroSped
         {
-            public Registro0000()
+            public Registro0000() : base("0000")
             {
-                Reg = "0000";
             }
 
             /// <summary>
@@ -57,13 +56,13 @@ namespace FiscalBr.ECF
             ///     Patrimônio remanescente em caso de cisão (%).
             /// </summary>
             [SpedCampos(8, "PAT_REMAN_CIS", "N", 8, 4, false, 2)]
-            public decimal PatRemanCis { get; set; }
+            public decimal? PatRemanCis { get; set; }
 
             /// <summary>
             ///     Data da situação especial ou evento.
             /// </summary>
             [SpedCampos(9, "DT_SIT_ESP", "N", 8, 0, false, 2)]
-            public DateTime DtSitEsp { get; set; }
+            public DateTime? DtSitEsp { get; set; }
 
             /// <summary>
             ///     Data do início do período.
@@ -93,20 +92,19 @@ namespace FiscalBr.ECF
             ///     Indicador do tipo da ECF.
             /// </summary>
             [SpedCampos(14, "TIP_ECF", "N", 1, 0, true, 2)]
-            public int TipEcf { get; set; }
+            public int? TipEcf { get; set; }
 
             /// <summary>
             ///     Identificação da SCP
             /// </summary>
             [SpedCampos(15, "COD_SCP", "N", 14, 0, false, 2)]
-            public int CodScp { get; set; }
+            public int? CodScp { get; set; }
         }
 
-        public class Reg0001 : RegistroBaseSped
+        public class Reg0001 : RegistroSped
         {
-            public Reg0001()
+            public Reg0001() : base("0001")
             {
-                Reg = "0001";
             }
 
             /// <summary>
@@ -116,11 +114,10 @@ namespace FiscalBr.ECF
             public int IndDad { get; set; }
         }
 
-        public class Reg0010 : RegistroBaseSped
+        public class Reg0010 : RegistroSped
         {
-            public Reg0010()
+            public Reg0010() : base("0010")
             {
-                Reg = "0010";
             }
 
             [SpedCampos(2, "HASH_ECF_ANTERIOR", "C", 40, 0, false, 2)]
@@ -129,72 +126,71 @@ namespace FiscalBr.ECF
             [SpedCampos(3, "OPT_REFIS", "C", 1, 0, true, 2)]
             public string OptRefis { get; set; }
 
-            [SpedCampos(4, "OPT_PAES", "C", 1, 0, true, 2)]
-            public string OptPaes { get; set; }
+            //[SpedCampos(4, "OPT_PAES", "C", 1, 0, true, 2)]
+            //public string OptPaes { get; set; }
 
             /// <summary>
             ///     Valores validos: [1;2;3;4;5;6;7;8;9]
             /// </summary>
-            [SpedCampos(5, "FORMA_TRIB", "N", 1, 0, true, 2)]
+            [SpedCampos(4, "FORMA_TRIB", "N", 1, 0, true, 2)]
             public int FormaTrib { get; set; }
 
             /// <summary>
             ///     Valores validos: [T;A]
             /// </summary>
-            [SpedCampos(6, "FORMA_APUR", "C", 1, 0, false, 2)]
+            [SpedCampos(5, "FORMA_APUR", "C", 1, 0, false, 2)]
             public string FormaApur { get; set; }
 
             /// <summary>
             ///     Valores validos: [01;02;03]
             /// </summary>
-            [SpedCampos(7, "COD_QUALIF_PJ", "N", 2, 0, false, 2)]
+            [SpedCampos(6, "COD_QUALIF_PJ", "N", 2, 0, false, 2)]
             public int? CodQualifPj { get; set; }
 
             /// <summary>
             ///     Valores validos: [0;R;P;A;E]
             /// </summary>
-            [SpedCampos(8, "FORMA_TRIB_PER", "C", 4, 0, false, 2)]
+            [SpedCampos(7, "FORMA_TRIB_PER", "C", 4, 0, false, 2)]
             public string FormaTribPer { get; set; }
 
-            [SpedCampos(9, "MES_BAL_RED", "C", 12, 0, false, 2)]
+            [SpedCampos(8, "MES_BAL_RED", "C", 12, 0, false, 2)]
             public string MesBalRed { get; set; }
 
             /// <summary>
             ///     Valores validos: [L;C]
             /// </summary>
-            [SpedCampos(10, "TIP_ESC_PRE", "C", 1, 0, false, 2)]
+            [SpedCampos(9, "TIP_ESC_PRE", "C", 1, 0, false, 2)]
             public string TipEscPre { get; set; }
 
             /// <summary>
             ///     Valores validos: [01;02;03;04;05;06;07;08;09;10;11;12;13;14;15;99]
             /// </summary>
-            [SpedCampos(11, "TIP_ENT", "N", 2, 0, false, 2)]
+            [SpedCampos(10, "TIP_ENT", "N", 2, 0, false, 2)]
             public int? TipEnt { get; set; }
 
             /// <summary>
             ///     Valores validos: [A;T;D]
             /// </summary>
-            [SpedCampos(12, "FORMA_APUR_I", "C", 1, 0, false, 2)]
+            [SpedCampos(11, "FORMA_APUR_I", "C", 1, 0, false, 2)]
             public string FormaApurI { get; set; }
 
             /// <summary>
             ///     Valores validos: [A;T;D]
             /// </summary>
-            [SpedCampos(13, "APUR_CSLL", "C", 1, 0, false, 2)]
+            [SpedCampos(12, "APUR_CSLL", "C", 1, 0, false, 2)]
             public string ApurCsll { get; set; }
 
             /// <summary>
             ///     Valores validos: [1;2]
             /// </summary>
-            [SpedCampos(14, "IND_REC_RECEITA", "N", 1, 0, false, 2)]
+            [SpedCampos(13, "IND_REC_RECEITA", "N", 1, 0, false, 2)]
             public int? IndRecReceita { get; set; }
         }
 
-        public class Reg0020 : RegistroBaseSped
+        public class Reg0020 : RegistroSped
         {
-            public Reg0020()
+            public Reg0020() : base("0020")
             {
-                Reg = "0020";
             }
 
             /// <summary>
@@ -381,11 +377,10 @@ namespace FiscalBr.ECF
             public string IndPaisAPais { get; set; }
         }
 
-        public class Reg0021 : RegistroBaseSped
+        public class Reg0021 : RegistroSped
         {
-            public Reg0021()
+            public Reg0021() : base("0021")
             {
-                Reg = "0021";
             }
 
             /// <summary>
@@ -485,11 +480,10 @@ namespace FiscalBr.ECF
             public string IndOlimpiadas { get; set; }
         }
 
-        public class Reg0030 : RegistroBaseSped
+        public class Reg0030 : RegistroSped
         {
-            public Reg0030()
+            public Reg0030() : base("0030")
             {
-                Reg = "0030";
             }
 
             [SpedCampos(2, "COD_NAT", "N", 4, 0, true, 2)]
@@ -526,12 +520,12 @@ namespace FiscalBr.ECF
             public string Email { get; set; }
         }
 
-        public class Reg0035 : RegistroBaseSped
+        public class Reg0035 : RegistroSped
         {
-            public Reg0035()
+            public Reg0035() : base("0035")
             {
-                Reg = "0035";
             }
+
 
             [SpedCampos(2, "COD_SCP", "C", 14, 0, true, 2)]
             public string CodScp { get; set; }
@@ -540,26 +534,25 @@ namespace FiscalBr.ECF
             public string NomeScp { get; set; }
         }
 
-        public class Reg0930 : RegistroBaseSped
+        public class Reg0930 : RegistroSped
         {
-            public Reg0930()
+            public Reg0930() : base("0930")
             {
-                Reg = "0930";
             }
 
-            [SpedCampos(2, "IDENT_NOM", "C", 0, 0, true, 2)]
+            [SpedCampos(2, "IDENT_NOM", "C", 40, 0, true, 2)]
             public string IdentNom { get; set; }
 
             /// <summary>
             ///     CPF 11 - CNPJ 14
             /// </summary>
-            [SpedCampos(3, "IDENT_CPF_CNPJ", "N", 0, 0, true, 2)]
+            [SpedCampos(3, "IDENT_CPF_CNPJ", "N", 40, 0, true, 2)]
             public string IdentCpfCnpj { get; set; }
 
             [SpedCampos(4, "IDENT_QUALIF", "C", 3, 0, true, 2)]
             public string IdentQualif { get; set; }
 
-            [SpedCampos(5, "IND_CRC", "C", 0, 0, false, 2)]
+            [SpedCampos(5, "IND_CRC", "C", 40, 0, false, 2)]
             public string IndCrc { get; set; }
 
             [SpedCampos(6, "EMAIL", "C", 60, 0, true, 2)]
@@ -569,14 +562,13 @@ namespace FiscalBr.ECF
             public string Fone { get; set; }
         }
 
-        public class Reg0990 : RegistroBaseSped
+        public class Reg0990 : RegistroSped
         {
-            public Reg0990()
+            public Reg0990() : base("0990")
             {
-                Reg = "0990";
             }
 
-            [SpedCampos(2, "QTD_LIN", "N", 0, 0, true, 2)]
+            [SpedCampos(2, "QTD_LIN", "N", int.MaxValue, 0, true, 2)]
             public int QtdLin { get; set; }
         }
     }

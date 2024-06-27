@@ -6,22 +6,20 @@ namespace FiscalBr.ECF
 {
     public class BlocoK
     {
-        public class RegK001 : RegistroBaseSped
+        public class RegK001 : RegistroSped
         {
-            public RegK001()
+            public RegK001() : base("K001")
             {
-                Reg = "K001";
             }
 
             [SpedCampos(2, "IND_DAD", "N", 1, 0, true, 2)]
             public int IndDad { get; set; }
         }
 
-        public class RegK030 : RegistroBaseSped
+        public class RegK030 : RegistroSped
         {
-            public RegK030()
+            public RegK030() : base("K030")
             {
-                Reg = "K030";
             }
 
             [SpedCampos(2, "DT_INI", "N", 8, 0, true, 2)]
@@ -34,11 +32,10 @@ namespace FiscalBr.ECF
             public string PerApur { get; set; }
         }
 
-        public class RegK155 : RegistroBaseSped
+        public class RegK155 : RegistroSped
         {
-            public RegK155()
+            public RegK155() : base("K155")
             {
-                Reg = "K155";
             }
 
             [SpedCampos(2, "COD_CTA", "C", 0, 0, true, 2)]
@@ -66,11 +63,10 @@ namespace FiscalBr.ECF
             public string IndVlSldFin { get; set; }
         }
 
-        public class RegK156 : RegistroBaseSped
+        public class RegK156 : RegistroSped
         {
-            public RegK156()
+            public RegK156() : base("K156")
             {
-                Reg = "K156";
             }
 
             [SpedCampos(2, "COD_CTA_REF", "C", 0, 0, true, 2)]
@@ -83,11 +79,10 @@ namespace FiscalBr.ECF
             public string IndVlSldFin { get; set; }
         }
 
-        public class RegK355 : RegistroBaseSped
+        public class RegK355 : RegistroSped
         {
-            public RegK355()
+            public RegK355() : base("K355")
             {
-                Reg = "K355";
             }
 
             [SpedCampos(2, "COD_CTA", "C", 0, 0, true, 2)]
@@ -103,11 +98,10 @@ namespace FiscalBr.ECF
             public string IndVlSldFin { get; set; }
         }
 
-        public class RegK356 : RegistroBaseSped
+        public class RegK356 : RegistroSped
         {
-            public RegK356()
+            public RegK356() : base("K356")
             {
-                Reg = "K356";
             }
 
             [SpedCampos(2, "COD_CTA_REF", "C", 0, 0, true, 2)]
@@ -120,14 +114,13 @@ namespace FiscalBr.ECF
             public string IndVlSldFin { get; set; }
         }
 
-        public class RegK990 : RegistroBaseSped
+        public class RegK990 : RegistroSped
         {
-            public RegK990()
+            public RegK990() : base("K990")
             {
-                Reg = "K990";
             }
 
-            [SpedCampos(2, "QTD_LIN", "N", 0, 0, true, 2)]
+            [SpedCampos(2, "QTD_LIN", "N", int.MaxValue, 0, true, 2)]
             public int QtdLin { get; set; }
         }
     }

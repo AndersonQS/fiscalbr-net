@@ -6,22 +6,20 @@ namespace FiscalBr.ECF
 {
     public class Bloco9
     {
-        public class Reg9001 : RegistroBaseSped
+        public class Reg9001 : RegistroSped
         {
-            public Reg9001()
+            public Reg9001() : base("9001")
             {
-                Reg = "9001";
             }
 
             [SpedCampos(2, "IND_DAD", "N", 1, 0, true, 2)]
             public int IndDad { get; set; }
         }
 
-        public class Reg9100 : RegistroBaseSped
+        public class Reg9100 : RegistroSped
         {
-            public Reg9100()
+            public Reg9100() : base("9100")
             {
-                Reg = "9100";
             }
 
             [SpedCampos(2, "NOM_REGRA", "N", 0, 0, true, 2)]
@@ -43,17 +41,16 @@ namespace FiscalBr.ECF
             public decimal? Conteudo { get; set; }
         }
 
-        public class Reg9900 : RegistroBaseSped
+        public class Reg9900 : RegistroSped
         {
-            public Reg9900()
+            public Reg9900() : base("9900")
             {
-                Reg = "9900";
             }
 
             [SpedCampos(2, "REG_BLC", "C", 4, 0, true, 2)]
             public string RegBlc { get; set; }
 
-            [SpedCampos(3, "QTD_REG_BLC", "N", 0, 0, true, 2)]
+            [SpedCampos(3, "QTD_REG_BLC", "N", int.MaxValue, 0, true, 2)]
             public int QtdRegBlc { get; set; }
 
             [SpedCampos(4, "VERSAO", "C", 4, 0, false, 2)]
@@ -63,25 +60,23 @@ namespace FiscalBr.ECF
             public string IdTabDin { get; set; }
         }
 
-        public class Reg9990 : RegistroBaseSped
+        public class Reg9990 : RegistroSped
         {
-            public Reg9990()
+            public Reg9990() : base("9990")
             {
-                Reg = "9990";
             }
 
-            [SpedCampos(2, "QTD_LIN", "N", 0, 0, true, 2)]
+            [SpedCampos(2, "QTD_LIN", "N", int.MaxValue, 0, true, 2)]
             public int QtdLin { get; set; }
         }
 
-        public class Reg9999 : RegistroBaseSped
+        public class Reg9999 : RegistroSped
         {
-            public Reg9999()
+            public Reg9999() : base("9999")
             {
-                Reg = "9999";
             }
 
-            [SpedCampos(2, "QTD_LIN", "N", 0, 0, true, 2)]
+            [SpedCampos(2, "QTD_LIN", "N", int.MaxValue, 0, true, 2)]
             public int QtdLin { get; set; }
         }
     }

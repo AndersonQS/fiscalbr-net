@@ -6,22 +6,20 @@ namespace FiscalBr.ECF
 {
     public class BlocoW
     {
-        public class RegW001 : RegistroBaseSped
+        public class RegW001 : RegistroSped
         {
-            public RegW001()
+            public RegW001() : base("W001")
             {
-                Reg = "W001";
             }
 
             [SpedCampos(2, "IND_DAD", "N", 1, 0, true, 2)]
             public int IndDad { get; set; }
         }
 
-        public class RegW100 : RegistroBaseSped
+        public class RegW100 : RegistroSped
         {
-            public RegW100()
+            public RegW100() : base("W100")
             {
-                Reg = "W100";
             }
 
             [SpedCampos(2, "NOME_MULTINACIONAL", "C", 0, 0, true, 2)]
@@ -67,11 +65,10 @@ namespace FiscalBr.ECF
             public string IndIdioma { get; set; }
         }
 
-        public class RegW200 : RegistroBaseSped
+        public class RegW200 : RegistroSped
         {
-            public RegW200()
+            public RegW200() : base("W200")
             {
-                Reg = "W200";
             }
 
             [SpedCampos(2, "JURISDICAO", "C", 2, 0, false, 2)]
@@ -135,11 +132,10 @@ namespace FiscalBr.ECF
             public decimal? NumEmp { get; set; }
         }
 
-        public class RegW250 : RegistroBaseSped
+        public class RegW250 : RegistroSped
         {
-            public RegW250()
+            public RegW250() : base("W250")
             {
-                Reg = "W250";
             }
 
             [SpedCampos(2, "JUR_DIFERENTE", "C", 2, 0, false, 2)]
@@ -221,11 +217,10 @@ namespace FiscalBr.ECF
             public string Observacao { get; set; }
         }
 
-        public class RegW300 : RegistroBaseSped
+        public class RegW300 : RegistroSped
         {
-            public RegW300()
+            public RegW300() : base("W300")
             {
-                Reg = "W300";
             }
 
             [SpedCampos(2, "JURISDICAO", "C", 0, 0, false, 2)]
@@ -268,14 +263,13 @@ namespace FiscalBr.ECF
             public string FimObservacao { get; set; }
         }
 
-        public class RegW990 : RegistroBaseSped
+        public class RegW990 : RegistroSped
         {
-            public RegW990()
+            public RegW990() : base("W990")
             {
-                Reg = "W990";
             }
 
-            [SpedCampos(2, "QTD_LIN", "N", 0, 0, true, 2)]
+            [SpedCampos(2, "QTD_LIN", "N", int.MaxValue, 0, true, 2)]
             public int QtdLin { get; set; }
         }
     }

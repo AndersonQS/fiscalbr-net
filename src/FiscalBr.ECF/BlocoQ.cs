@@ -6,22 +6,20 @@ namespace FiscalBr.ECF
 {
     public class BlocoQ
     {
-        public class RegQ001 : RegistroBaseSped
+        public class RegQ001 : RegistroSped
         {
-            public RegQ001()
+            public RegQ001() : base("Q001")
             {
-                Reg = "Q001";
             }
 
             [SpedCampos(2, "IND_DAD", "N", 1, 0, true, 2)]
             public int IndDad { get; set; }
         }
 
-        public class RegQ100 : RegistroBaseSped
+        public class RegQ100 : RegistroSped
         {
-            public RegQ100()
+            public RegQ100() : base("Q100")
             {
-                Reg = "Q100";
             }
 
             [SpedCampos(2, "DATA", "N", 8, 0, true, 2)]
@@ -43,14 +41,13 @@ namespace FiscalBr.ECF
             public decimal SldFin { get; set; }
         }
 
-        public class RegQ990 : RegistroBaseSped
+        public class RegQ990 : RegistroSped
         {
-            public RegQ990()
+            public RegQ990() : base("Q990")
             {
-                Reg = "Q990";
             }
 
-            [SpedCampos(2, "QTD_LIN", "N", 0, 0, true, 2)]
+            [SpedCampos(2, "QTD_LIN", "N", int.MaxValue, 0, true, 2)]
             public int QtdLin { get; set; }
         }
     }
